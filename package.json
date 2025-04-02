@@ -1,0 +1,20 @@
+{
+  "name": "openai-proxy",
+  "version": "1.0.0",
+  "description": "A proxy server based on Node.js and Express.js for forwarding HTTP requests without modification.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "node server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.3",
+    "morgan": "^1.10.0"
+  }
+}
