@@ -17,7 +17,10 @@ app.use(morgan("dev"));
 const openaiProxy = createProxyMiddleware({
   target: "https://api.openai.com", // Main OpenAI URL
   changeOrigin: true, // Changes Origin to target URL
-  pathRewrite: { "^/openai": "" }, // Removes /openai from the path
+  pathRewrite: {
+    "^/openai/v1": "/v1",
+    "^/openai": "/v1",
+  },
   onProxyReq: (proxyReq, req) => {
     // Add OpenAI API key to headers (if not provided by client)
     if (!proxyReq.getHeader("Authorization")) {
